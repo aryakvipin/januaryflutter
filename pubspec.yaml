@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   device_preview:
   google_fonts:
+  font_awesome_flutter: ^10.7.0
+  flutter_staggered_grid_view: ^0.7.0
 
 dev_dependencies:
   flutter_test:

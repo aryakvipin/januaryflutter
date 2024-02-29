@@ -23,20 +23,22 @@ class _ListbuilderState extends State<Listbuilder> {
         return Card(
           shadowColor: Colors.green,
           surfaceTintColor: Colors.red,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+
           color: Colors.yellow[clr[index]],
           child: ListTile(
             leading: CircleAvatar(backgroundImage: AssetImage(images[index]),),
             title: Text("${name[index]}"),
             subtitle: Text("${phone[index]}"),
-            trailing:ListView(
-              children: [
-            Row(children: [
-            IconButton(onPressed: (){}, icon: Icon(Icons.edit)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.delete)),
-          ],)
-              ]
+            trailing: SizedBox(
+              child: Row(
+                children: [
+                  IconButton(onPressed: (){}, icon: Icon(Icons.edit)),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.delete))
+
+                ],
+              ),
             ),
+
           ),
         );
 
