@@ -16,7 +16,7 @@ class Gridvieweg extends StatelessWidget {
       ),
       body: GridView(
         gridDelegate:
-            SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100,m),
+            SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 100,),
         children: [
           Card(
             child: Column(

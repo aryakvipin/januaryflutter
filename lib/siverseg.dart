@@ -19,6 +19,7 @@ class SliverExx extends StatelessWidget {
             floating: true,
             pinned: true,
             title: const Text("Custom AppBar"),
+
             actions: [
               IconButton(
                   onPressed: () {},
