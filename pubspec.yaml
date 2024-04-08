@@ -43,7 +43,15 @@ dependencies:
   expansion_tile_card: ^3.0.0
   intro_screen_onboarding_flutter: ^1.0.0
   readmore: ^2.2.0
+  geolocator:
+  webview_flutter:
+  permission_handler:
+  image_picker: ^1.0.7
+  video_player:
+  google_maps_flutter: ^2.6.0
+  shared_preferences: ^2.2.2
   lottie: ^3.1.0
+  sqflite: ^2.3.3
 
 dev_dependencies:
   flutter_test:
