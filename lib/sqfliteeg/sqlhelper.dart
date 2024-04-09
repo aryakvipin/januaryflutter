@@ -41,7 +41,7 @@ class SQLHelper {
     return db.query('notes', orderBy: 'id');
   }
 
-  // ///read a single value from table
+  ///read a single value from table
   // static Future<List<Map<String, dynamic>>> readSingleValue(int id) async {
   //   final db = await SQLHelper.myData(); ///to open database
   //   return db.query('notes', where: 'id = ?', whereArgs: [id], limit: 1);

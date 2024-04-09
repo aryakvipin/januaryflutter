@@ -48,6 +48,7 @@ class _MainSQLState extends State<MainSQL> {
           itemCount: note_from_db.length,
 
           itemBuilder: (context, index) {
+
             return Card(
               child: ListTile(
 
