@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-]import 'package:sqflite/sqflite.dart ' as sql;
+import 'package:sqflite/sqflite.dart ' as sql;
 class SQLHelper {
 
 
