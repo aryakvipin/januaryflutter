@@ -6,7 +6,13 @@ import 'package:januaryflutter/datapassing/splsh.dart';
 
 
 import 'dummyprodect.dart';
+void main(){
+runApp(MaterialApp(home: Mainscreen(),
+  routes:{
 
+    'secondpage': (context) =>productdetils()
+  },));
+}
 
 class Mainscreen extends StatefulWidget{
   @override
@@ -21,7 +27,9 @@ class _MainscreenState extends State<Mainscreen> {
        children: dummyProducts.map((product)=>GestureDetector(
          child: Center(
            child: Container(color: Colors.green[450],
-             height: 150,width: 250,
+             height
+
+                 : 150,width: 250,
              child: Card(
                child: Column(
                  children: [

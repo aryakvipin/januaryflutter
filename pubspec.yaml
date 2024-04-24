@@ -52,6 +52,11 @@ dependencies:
   shared_preferences: ^2.2.2
   lottie: ^3.1.0
   sqflite: ^2.3.3
+  geocoding:
+  hive_flutter:
+  hive:
+  email_validator:
+  get:
 
 dev_dependencies:
   flutter_test:
