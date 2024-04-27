@@ -2,56 +2,14 @@ import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:hive/hive.dart';
 
-import '../../../splashscreen.dart';
 import '../database/Database.dart';
+import '../model/usermodel.dart';
 
-class Registration extends StatefulWidget {
-  @override
-  State<Registration> createState() => _RegistrationState();
-}
-
-class _RegistrationState extends State<Registration> {
+class Registration extends StatelessWidget {
   TextEditingController usename = TextEditingController();
-
   TextEditingController password = TextEditingController();
-
   TextEditingController confirmpass = TextEditingController();
-  final tbox = Hive.box('task_box');
-  List<Map<String, dynamic>> task = [];
-
-  @override
-  void initState() {
-    super.initState();
-
-
-  }
-  Future<void> createTask(Map<String, dynamic> task) async {
-    await tbox.add(task);
-
-  }
-  void loadTask() {
-    final data = tbox.keys.map((id) {
-      final value = tbox.get(id);
-      return {'key': id, 'email': value['email'], 'password': value['password']};
-    }).toList();
-
-    setState(() {
-      task = data.reversed.toList();
-    });
-  }
-void userfind(String uemail){
-  var tatask= task.firstWhere((element) => element['email'] == uemail);
-  if (tatask != '') {
-    Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>Spalshscreen()));
-  } else {
-    print('nothing found');
-  }
-
-}
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -116,16 +74,18 @@ void userfind(String uemail){
       if (emailValidationResult == true) {
         final passValidationResult = checkPassword(pass, cpass);
         if (passValidationResult == true) {
-          var data = userfind(email);
+          final user = User(email: email, password: pass);
 
-
+           await DBFunction.instance.userSignUp(user);
           Get.back();
           Get.snackbar("Success", "Account created");
         }
-      } else {
+      }
+      else {
         Get.snackbar("Error", "Provide a valid Email");
       }
-    } else {
+    }
+    else {
       Get.snackbar("Error", "Fields Can not be empty");
     }
   }
