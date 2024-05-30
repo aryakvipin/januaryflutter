@@ -54,11 +54,15 @@ dependencies:
   sqflite: ^2.3.3
   geocoding:
   hive_flutter:
+  top_snackbar_flutter: ^3.1.0
+  scrollable_positioned_list: ^0.3.8
+  internet_connection_checker: ^1.0.0+1
   hive:
   email_validator:
   get:
   http:
   cached_network_image: ^3.3.1
+  dio:
 
 dev_dependencies:
   flutter_test:

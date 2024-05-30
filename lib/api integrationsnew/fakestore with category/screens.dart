@@ -77,6 +77,7 @@ class CategoryDetailsScreen extends StatelessWidget {
               itemBuilder: (context, index) {
                 Map<String, dynamic> product = products[index];
                 return ListTile(
+
                   title: Text(product['title']),
                   subtitle: Text(product['description']),
                   // Add more details as needed
