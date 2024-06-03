@@ -57,6 +57,7 @@ dependencies:
   top_snackbar_flutter: ^3.1.0
   scrollable_positioned_list: ^0.3.8
   internet_connection_checker: ^1.0.0+1
+  provider: ^6.1.2
   hive:
   email_validator:
   get:

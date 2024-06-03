@@ -27,6 +27,8 @@ class HomePost extends StatelessWidget {
       appBar: buildAppBar(),
       floatingActionButton: Obx(() =>
           controller.isInternetConnected.value ? buildFAB() : Container()),
+
+
       body: Obx(
         () => SizedBox(
             width: double.infinity,
